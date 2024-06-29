@@ -37,4 +37,4 @@ out/
 .vscode/
 
 ## Database ##
-../DB/data/jalvadev.db
+../DB/data/
