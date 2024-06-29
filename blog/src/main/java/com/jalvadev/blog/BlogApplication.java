@@ -23,25 +23,10 @@ public class BlogApplication {
 		SpringApplication.run(BlogApplication.class, args);
 	}
 
-	@GetMapping("/hello")
-	public String hello(@RequestParam(value = "name", defaultValue = "world") String name){
-		return "Hello world!";
-	}
+	@GetMapping("/")
+	public User index(){
+		User user = service.getDefaultUser();
 
-	@GetMapping("/insert")
-	public String insertUsers(){
-
-		service.createUser(new User("Jalvadev", "Testing user insertion"));
-		service.createUser(new User("Jalvadev2", "Testing user insertion"));
-
-		return "Inserted";
-	}
-
-	@GetMapping("/list")
-	public List<User> listAllUser() {
-
-		List<User> userList = service.getAllUsers(); 
-		return userList;
-	}
-	
+		return user;
+	}	
 }
