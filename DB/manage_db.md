@@ -1,6 +1,6 @@
 # Acceder a la DB
 
-## Crear la imagen
+## Crear el contenedor
 
 Para crear el contenedor, sobre la imagen del Dockerfile, lanzamos el comando build:
 
