@@ -1,4 +1,4 @@
-# Creación y puesta en marcha de la DB
+# Acceder a la DB
 
 ## Crear la imagen
 
