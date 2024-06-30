@@ -13,18 +13,18 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long userId;
 
     private String userName;
     private String about;
 
-    @OneToMany
+    @OneToMany(mappedBy = "user")
     private List<Post> posts;
 
     public User() {}
 
-    public Long getId(){ return this.id; }
-    public void setId (Long id){ this.id =  id; }
+    public Long getId(){ return this.userId; }
+    public void setId (Long userId){ this.userId =  userId; }
 
     public String getUserName(){ return this.userName; }
     public void setUserName(String userName){ this.userName = userName; }
