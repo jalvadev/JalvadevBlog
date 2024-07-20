@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jalvadev.blog.models.User;
+import com.jalvadev.blog.dtos.UserDTO;
 import com.jalvadev.blog.models.Post;
 import com.jalvadev.blog.services.PostService;
 import com.jalvadev.blog.services.UserService;
@@ -29,8 +30,8 @@ public class BlogApplication {
 	}
 
 	@GetMapping("/")
-	public User index(){
-		User user = service.getDefaultUser();
+	public UserDTO index(){
+		UserDTO user = service.getDefaultUser();
 
 		return user;
 	}	
