@@ -20,7 +20,7 @@ public class UserDTO {
     }
 
 
-    public Long getId(){ return this.userId; }
+    public Long getUserId(){ return this.userId; }
 
     public String getUserName(){ return this.userName; }
 
