@@ -8,7 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jalvadev.blog.models.User;
 import com.jalvadev.blog.dtos.UserDTO;
 import com.jalvadev.blog.models.Post;
 import com.jalvadev.blog.services.PostService;

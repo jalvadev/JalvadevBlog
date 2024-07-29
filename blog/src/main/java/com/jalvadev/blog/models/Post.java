@@ -7,6 +7,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 
 @Entity
@@ -24,6 +25,10 @@ public class Post {
     @JoinColumn(name="user_id", nullable = false)
     private User user;
 
+    @ManyToMany
+    private Tag[] tag;
+
+
     public Post(){}
 
     public void setId(UUID id){ this.id = id; }
@@ -37,4 +42,7 @@ public class Post {
 
     public String getImagePath() { return imagePath; }
     public void setImagePath(String imagePath) { this.imagePath = imagePath; }
+
+    public Tag[] getTag() { return this.tag; }
+    public void setTag(Tag[] tag) { this.tag = tag; }
 }
