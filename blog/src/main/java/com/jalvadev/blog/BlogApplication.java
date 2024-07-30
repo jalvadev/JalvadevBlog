@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.jalvadev.blog.bases.Result;
 import com.jalvadev.blog.dtos.UserDTO;
 import com.jalvadev.blog.models.Post;
 import com.jalvadev.blog.services.PostService;
@@ -29,16 +30,9 @@ public class BlogApplication {
 	}
 
 	@GetMapping("/")
-	public UserDTO index(){
-		UserDTO user = service.getDefaultUser();
+	public Result<UserDTO> index(){
+		Result<UserDTO> userResult = service.getDefaultUser();
 
-		return user;
+		return userResult;
 	}	
-
-	@GetMapping("/posts")
-	public List<Post> getPosts() {
-		Long id = 1l;
-		return postService.getAllPostByUserId(id);
-	}
-	
 }

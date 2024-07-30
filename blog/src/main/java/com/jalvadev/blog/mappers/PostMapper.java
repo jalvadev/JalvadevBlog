@@ -1,5 +1,7 @@
 package com.jalvadev.blog.mappers;
 
+import java.util.List;
+
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
@@ -16,4 +18,6 @@ public abstract class PostMapper {
     public abstract PostSimpleDTO postToPostSimpleDTO(Post post);
 
     public abstract PostCompleteDTO postToPostCompleteDTO(Post post);
+
+    public abstract List<PostSimpleDTO> postListToPostSimpleDTOList(List<Post> post);
 }
