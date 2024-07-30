@@ -1,7 +1,6 @@
 package com.jalvadev.blog.dtos;
 
-
-public class PostSimpleDTO {
+public class PostCompleteDTO {
     
     private String id;
 
@@ -9,10 +8,13 @@ public class PostSimpleDTO {
 
     private String imagePath;
 
-    public PostSimpleDTO(String id, String title, String imagePath){
+    private String postContent;
+
+    public PostCompleteDTO(String id, String title, String imagePath, String postContent){
         this.id = id;
         this.title = title;
         this.imagePath = imagePath;
+        this.postContent = postContent;
     }
 
     public String getId(){ return this.id; }
@@ -20,4 +22,6 @@ public class PostSimpleDTO {
     public String getTitle() { return title; }
 
     public String getImagePath() { return imagePath; }
+
+    public String getPostContent() { return postContent; }
 }

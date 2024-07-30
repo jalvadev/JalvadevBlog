@@ -15,7 +15,7 @@ public class Post {
     
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    private String id;
 
     private String title;
     private String postContent;
@@ -31,8 +31,8 @@ public class Post {
 
     public Post(){}
 
-    public void setId(UUID id){ this.id = id; }
-    public UUID getId(){ return this.id; }
+    public void setId(String id){ this.id = id; }
+    public String getId(){ return this.id; }
 
     public String getTitle() { return title; }
     public void setTitle(String title) { this.title = title; }
@@ -42,6 +42,9 @@ public class Post {
 
     public String getImagePath() { return imagePath; }
     public void setImagePath(String imagePath) { this.imagePath = imagePath; }
+
+    public User getUser() { return this.user; }
+    public void setUser(User user) { this.user = user; }
 
     public Tag[] getTag() { return this.tag; }
     public void setTag(Tag[] tag) { this.tag = tag; }
